@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ヤイトハタ養殖事業（中間育成）</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/design.css">
+    <style>
+        /* 追加したCSS */
+        .form-container {
+            display: flex;
+            flex-direction: column; /* 垂直方向に並べる */
+            align-items: center; /* 子要素を水平方向の中央に配置 */
+        }
+
+        label {
+            text-align: center; /* ラベルのテキストを中央揃えにする */
+        }
+
+        input[type="text"],input[type="file"],input[type="memo"]
+        select {
+            width: 100%
+        }
+
+        input[type="wt"],input[type="foodamout"] {
+            width: 40%;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="form-container">
+    <h1>ヤイトハタ養殖事業 <br>（中間育成）</h1>
+    <form id="myForm" action="/submit" method="post" enctype="multipart/form-data">
+
+        <label for="name">名前</label>
+        <select id="name" name="name" onchange="updateEmail()" autocomplete="name">
+            <option value="sample1">sample1</option>
+            <option value="sample2">sample2</option>
+            <option value="sample3">sample3</option>
+        </select>
+        
+        <label for="email">メールアドレス</label>
+        <select id="name" name="name">
+            <option value="ac244701@edu.okinawa-ct.ac.jp">ac244701@edu.okinawa-ct.ac.jp</option>
+            <option value="ac244702@edu.okinawa-ct.ac.jp">ac244702@edu.okinawa-ct.ac.jp</option>
+            <option value="ac244703@edu.okinawa-ct.ac.jp">ac244703@edu.okinawa-ct.ac.jp</option>
+            <option value="ac244704@edu.okinawa-ct.ac.jp">ac244704@edu.okinawa-ct.ac.jp</option>
+        </select>
+
+        <label for="foodtime">給餌時間</label>
+        <select id="foodtime" name="foodtime">
+            <option value="0:00">0:00</option>
+            <option value="1:00">1:00</option>
+            <option value="2:00">2:00</option>
+            <option value="3:00">3:00</option>
+            <option value="4:00">4:00</option>
+            <option value="5:00">5:00</option>
+            <option value="6:00">6:00</option>
+            <option value="7:00">7:00</option>
+            <option value="8:00">8:00</option>
+            <option value="9:00">9:00</option>
+            <option value="10:00">10:00</option>
+            <option value="11:00">11:00</option>
+            <option value="12:00">12:00</option>
+            <option value="13:00">13:00</option>
+            <option value="14:00">14:00</option>
+            <option value="15:00">15:00</option>
+            <option value="16:00">16:00</option>
+            <option value="17:00">17:00</option>
+            <option value="18:00">18:00</option>
+            <option value="19:00">19:00</option>
+            <option value="20:00">20:00</option>
+            <option value="21:00">21:00</option>
+            <option value="22:00">22:00</option>
+            <option value="23:00">23:00</option>
+        </select>
+
+        <label for="weather">天気</label>
+        <select id="weather" name="weather">
+            <option value="晴れ">晴れ</option>
+            <option value="曇り">曇り</option>
+            <option value="雨">雨</option>
+            <option value="雪">雪</option>
+        </select>
+
+        <label for="wind">風向</label>
+        <select id="wind" name="wind">
+            <option value="北">北</option>
+            <option value="東">東</option>
+            <option value="西">西</option>
+            <option value="南">南</option>
+        </select>
+
+        <label for="wt">水温（℃）</label>
+        <input type="wt" id="wt" name="wt" autocomplete="wt"><br>
+
+        <label for="foodamout">給餌量(g)</label>
+        <input type="memo" id="memo" name="memo" autocomplete="memo"><br>
+
+        <br>
+        <label for="image">ファイルを選択してください</label>
+        <input type="file" id="image" name="image">
+
+        <label for="memo">メモ（魚の状態観察・特記事項等）</label>
+        <input type="memo" id="memo" name="memo" autocomplete="memo"><br>
+
+        <label for="submit">送信</label>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+</body>
+</html>

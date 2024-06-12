@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif; /* ウェブページのフォントをArialに設定 */
+    background-color: #e0f7fa; /* ページ全体の背景色を淡い青色に設定 */
+    margin: 0; /* ページの外側の余白を0に設定 */
+    padding: 0; /* ページの内側の余白を0に設定 */
+    display: flex; /* ページ全体をフレックスコンテナにする */
+    justify-content: center; /* 子要素を水平方向の中央に配置 */
+    align-items: center; /* 子要素を垂直方向の中央に配置 */
+    height: 100vh; /* ページの高さをビューポートの高さに合わせる */
+}
+
+.form-container {
+    background-color: #87cefa; /* フォームコンテナの背景色を淡い青に設定 */
+    border: 1px solid #dee2e6; /* フォームコンテナに薄いグレーの境界線を設定 */
+    border-radius: 8px; /* フォームコンテナの角を丸くする */
+    padding: 20px; /* フォームコンテナ内の余白を設定 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* フォームコンテナに影を付ける */
+    width: 300px; /* フォームコンテナの幅を300pxに設定 */
+}
+
+h1 {
+    font-size: 1.5em; /* 見出しのフォントサイズを設定 */
+    margin-bottom: 20px; /* 見出しの下の余白を設定 */
+    text-align: center; /* 見出しのテキストを中央揃えにする */
+    background-color: #4682b4; /* 見出しの背景色を濃い青に設定 */
+    color: white; /* 見出しのテキストカラーを白に設定 */
+    padding: 10px; /* 見出しの内側の余白を設定 */
+    border-radius: 8px; /* 見出しの角を丸くする */
+}
+
+label {
+    display: block; /* ラベルをブロック要素にする */
+    margin-bottom: 8px; /* ラベルの下の余白を設定 */
+    font-weight: bold; /* ラベルのフォントを太字にする */
+    color: #ffffff; /* ラベルのテキストカラーを白に設定 */
+}
+
+input[type="text"],
+input[type="file"],
+select {
+    width: 100%; /* 幅を親要素に対して100%に設定 */
+    padding: 10px; /* 内側の余白を設定 */
+    margin-bottom: 20px; /* 下の余白を設定 */
+    border: 1px solid #303336; /* 薄いグレーの境界線を設定 */
+    border-radius: 4px; /* 角を丸くする */
+    box-sizing: border-box; /* パディングと境界線のサイズを含むように設定 */
+    background-color: #ffffff; /* 入力フィールドの背景色を白に設定 */
+}
+
+input[type="submit"] {
+    background-color: #007bff; /* ボタンの背景色を青に設定 */
+    color: white; /* ボタンのテキストカラーを白に設定 */
+    padding: 10px 20px; /* ボタンの内側の余白を設定 */
+    border: none; /* 境界線を無くす */
+    border-radius: 4px; /* 角を丸くする */
+    cursor: pointer; /* ホバー時のカーソルをポインタにする */
+    width: 100%; /* 幅を親要素に対して100%に設定 */
+}
+
+input[type="submit"]:hover {
+    background-color: #25ce4f; /* ボタンにマウスを乗せたときの背景色を濃い緑に設定 */
+}

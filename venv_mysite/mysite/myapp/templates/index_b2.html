@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang = "ja">
+<head>
+    <meta charset = "UTF-8"
+    <title>ヤイトハタ養殖事業（中間育成）</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/design.css">
+</head>
+<body>
+    <div class = "form-container"></div>
+        <h1>ヤイトハタ養殖事業（中間育成）</h1>
+        <form id = "myForm" action = "/submit" method = "post" enctype = "multipart/form-data">
+            <label for = "name">名前:</label>
+            <select id = "name" name = "name" onchange="updateEmail()">
+                <option value =  "">選択してください</option>
+                <option value = "sample1">sample1</option>
+                <option value = "sample2">sample2</option>
+            </select><br><br>
+            <label for = "email">メールアドレス:</label>
+            <input type = "text" id = "email" name = "email" readonly><br><br>
+            <label for = "image">ファイルを選択してください:</label>
+            <input type = "file" id = "image" name = "image"><br><br>
+            <label for = "submit">送信:</label>
+            <input type = "submit" value = "Submit">
+        </form>
+    </div>
+
+    <script>
+        function updateEmail(){
+            const emailMapping = {
+                'sample1': 'ac244701@edu.okinawa-ct.ac.jp',
+                'sample2': 'mi191302@edu.okinawa-ct.ac.jp'
+            };
+
+            const nameSelect = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const selectedName = nameSelect.value;
+
+            emailInput.value = emailMapping[selectedName] || '';
+        }
+    </script>
+</body>
+</html>
